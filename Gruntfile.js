@@ -43,10 +43,23 @@ module.exports = function(grunt) {
       }
     },
 
+    jshint: {
+      options: {
+        node: true
+      },
+      src: ['server.js']
+    },
+
     simplemocha: {
-      src: ['test/api/*.js']
+      src: ['test/api/*.js', 'test/client/*.js']
+    },
+
+    jscs: {
+      src: ['server.js'],
+      options: {
+        config: '.jscsrc'
+      }
     }
   });
-  grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev']);
-  grunt.registerTask('test', ['build:dev', 'simplemocha']);
+  grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev', 'jshint', 'simplemocha', 'jscs']);
 };
