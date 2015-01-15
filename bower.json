@@ -1,0 +1,14 @@
+{
+  "name": "browserify",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Chareesa/Browserify.git",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,17 @@
+#app {
+  border:5px solid pink;
+  background:purple;
+  float: left;
+}
+
+img {
+  display: block;
+}
+
+h3 {
+  color: purple;
+  text-align: center;
+  &:hover {
+    background-color: #eee;
+  }
+}
